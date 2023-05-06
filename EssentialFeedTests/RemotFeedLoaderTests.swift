@@ -20,7 +20,7 @@ final class RemotFeedLoaderTests: XCTestCase {
         let url = URL(string: "https://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)
         // Act part
-        sut.load()
+        sut.load() { _ in}
         //result
         XCTAssertEqual(client.requestedURLs, [url])
     }
@@ -30,8 +30,8 @@ final class RemotFeedLoaderTests: XCTestCase {
         let url = URL(string: "https://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)
         // Act part
-        sut.load()
-        sut.load()
+        sut.load() { _ in}
+        sut.load() { _ in}
         //result
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
@@ -63,7 +63,7 @@ final class RemotFeedLoaderTests: XCTestCase {
         }
         
         func load(from url: URL, completion: @escaping (Error) -> Void) {
-            messages.append((url, completion))            
+            messages.append((url, completion))
         }
         
         func complete(with error: Error, at index: Int = 0) {
