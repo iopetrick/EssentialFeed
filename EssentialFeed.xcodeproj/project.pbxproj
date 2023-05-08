@@ -13,6 +13,7 @@
 		2A4FFF8A2A03B920002A6BCD /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4FFF7F2A03B920002A6BCD /* EssentialFeed.framework */; };
 		2A4FFF9A2A03B93B002A6BCD /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FFF992A03B93B002A6BCD /* FeedItem.swift */; };
 		2A4FFF9C2A03B9AE002A6BCD /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4FFF9B2A03B9AE002A6BCD /* FeedLoader.swift */; };
+		2ABEFE6C2A08E6260081BD8D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEFE6B2A08E6260081BD8D /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		2A4FFF892A03B920002A6BCD /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4FFF992A03B93B002A6BCD /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		2A4FFF9B2A03B9AE002A6BCD /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
+		2ABEFE6B2A08E6260081BD8D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				2A374A0E2A0533B60054AA75 /* RemoteFeedLoader.swift */,
+				2ABEFE6B2A08E6260081BD8D /* HTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A374A0F2A0533B60054AA75 /* RemoteFeedLoader.swift in Sources */,
+				2ABEFE6C2A08E6260081BD8D /* HTTPClient.swift in Sources */,
 				2A4FFF9C2A03B9AE002A6BCD /* FeedLoader.swift in Sources */,
 				2A4FFF9A2A03B93B002A6BCD /* FeedItem.swift in Sources */,
 				2A4FFF842A03B920002A6BCD /* EssentialFeed.docc in Sources */,
