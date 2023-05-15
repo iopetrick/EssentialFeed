@@ -1,0 +1,19 @@
+<mxfile host="app.diagrams.net" modified="2023-05-05T13:35:20.711Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="buDq2vWp2fcXGepZLe_J" version="21.2.3" type="device">
+  <diagram name="Page-1" id="XcvUtTrIk60pD0x3uBPi">
+    <mxGraphModel dx="1434" dy="743" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CGQRFn6xAz2-C5GkMLI7-1" value="&amp;lt;FeedLoader&amp;gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeWidth=2;strokeColor=#CC0000;fontColor=#FF0000;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="327" y="315" width="126" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CGQRFn6xAz2-C5GkMLI7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=block;endFill=0;startArrow=none;startFill=0;fontSize=16;fillColor=none;strokeColor=#33FFFF;fontColor=#33FFFF;arcSize=10;strokeWidth=2;" edge="1" parent="1" source="CGQRFn6xAz2-C5GkMLI7-2" target="CGQRFn6xAz2-C5GkMLI7-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGQRFn6xAz2-C5GkMLI7-2" value="RemoteFeedLoader" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=none;strokeWidth=2;strokeColor=#33FFFF;fontColor=#33FFFF;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="145" y="209" width="167" height="48" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
