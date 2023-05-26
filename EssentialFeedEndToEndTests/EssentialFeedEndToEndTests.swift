@@ -34,10 +34,13 @@ final class EssentialFeedEndToEndTests: XCTestCase {
     
     // MARK: - Helper function
     
-    private func getFeedResult() -> LoadFeedResult? {
+    private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> LoadFeedResult? {
         let testServerURL = URL(string: "https://essentialdeveloper.com/feed-case-study/test-api/feed")!
         let client = URLSessionHTTPClient()
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
+        
+        trackForMemoryLeak(client, file: file, line: line)
+        trackForMemoryLeak(loader, file: file, line: line)
         
         let exp = expectation(description: "Wati for load completion")
         var receivedResult: LoadFeedResult?
@@ -50,53 +53,49 @@ final class EssentialFeedEndToEndTests: XCTestCase {
         wait(for: [exp], timeout: 30.0)
         return receivedResult
     }
-    
+            
     private func expectedItem(at index: Int) -> FeedItem {
-        return FeedItem(id: id(at: index),
-                        description: description(at: index),
-                        location: location(at: index),
-                        imageURL: imageURL(at: index))
-    }
-
-    private func id(at index: Int) -> UUID {
-        return UUID(uuidString: [
-            "73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6",
-            "BA298A85-6275-48D3-8315-9C8F7C1CD109",
-            "5A0D45B3-8E26-4385-8C5D-213E160A5E3C",
-            "FFOECFE2-2879-403F-8DBE-A83B4010B340",
-            "DC97EF5E-2CC9-4905-A8AD-3C351C311001",
-            "557D87F1-25D3-4D77-82E9-364B2ED9CB30",
-            "A83284EF-C2DF-415D-AB73-2A9B8B04950B",
-            "F79BD7F8-063F-46E2-8147-A67635C3BB01"
-        ][index])!
-    }
-    
-    private func description (at index: Int) -> String? {
-        return [
-            "Description 1",
-            nil,
-            "Description 3",
-            nil,
-            "Description 5",
-            "Description 6",
-            "Description 7",
-            "Description 8" ][index]
-    }
-    
-    private func location(at index: Int) -> String? {
-        return [
-            "Location 1",
-            "Location 2",
-            nil,
-            nil,
-            "Location 5",
-            "Location 6",
-            "Location 7",
-            "Location 8"
-        ][index]
-    }
-    
-    private func imageURL(at index: Int) -> URL {
-        return URL(string: "https://url-\(index+1).com")!
+        let arrayFeedItems = [
+            FeedItem(id: UUID(uuidString: "73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6")!,
+                     description: "Description 1",
+                     location: "Location 1",
+                     imageURL: URL(string: "https://url-1.com")!),
+            
+            FeedItem(id: UUID(uuidString: "BA298A85-6275-48D3-8315-9C8F7C1CD109")!,
+                     description: nil,
+                     location: "Location 2",
+                     imageURL: URL(string: "https://url-2.com")!),
+            
+            FeedItem(id: UUID(uuidString: "5A0D45B3-8E26-4385-8C5D-213E160A5E3C")!,
+                     description: "Description 3",
+                     location: nil,
+                     imageURL: URL(string: "https://url-3.com")!),
+            
+            FeedItem(id: UUID(uuidString: "FF0ECFE2-2879-403F-8DBE-A83B4010B340")!,
+                     description: nil,
+                     location: nil,
+                     imageURL: URL(string: "https://url-4.com")!),
+            
+            FeedItem(id: UUID(uuidString: "DC97EF5E-2CC9-4905-A8AD-3C351C311001")!,
+                     description: "Description 5",
+                     location: "Location 5",
+                     imageURL: URL(string: "https://url-5.com")!),
+            
+            FeedItem(id: UUID(uuidString: "557D87F1-25D3-4D77-82E9-364B2ED9CB30")!,
+                     description: "Description 6",
+                     location: "Location 6",
+                     imageURL: URL(string: "https://url-6.com")!),
+            
+            FeedItem(id: UUID(uuidString: "A83284EF-C2DF-415D-AB73-2A9B8B04950B")!,
+                     description: "Description 7",
+                     location: "Location 7",
+                     imageURL: URL(string: "https://url-7.com")!),
+            
+            FeedItem(id: UUID(uuidString: "F79BD7F8-063F-46E2-8147-A67635C3BB01")!,
+                     description: "Description 8",
+                     location: "Location 8",
+                     imageURL: URL(string: "https://url-8.com")!) ]
+        
+        return arrayFeedItems[index]
     }
 }
