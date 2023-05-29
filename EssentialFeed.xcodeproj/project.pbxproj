@@ -57,6 +57,7 @@
 		2ABEFE6D2A08E6720081BD8D /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
 		2ABEFE702A0916070081BD8D /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		2ADB27E72A120ECF00C20618 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		2AF73EA32A247E1200B90BDD /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		2A4FFF752A03B920002A6BCD = {
 			isa = PBXGroup;
 			children = (
+				2AF73EA32A247E1200B90BDD /* .travis.yml */,
 				2A3A904E2A208F7B005DB6E5 /* CI.xctestplan */,
 				2A3A903E2A206029005DB6E5 /* EssentialFeed.xctestplan */,
 				2A4FFF812A03B920002A6BCD /* EssentialFeed */,
